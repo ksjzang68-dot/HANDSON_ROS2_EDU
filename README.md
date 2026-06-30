@@ -2,17 +2,30 @@
 
 
 1단계: netdev 그룹 추가
+
 bashsudo usermod -aG netdev $USER
 → 로그아웃 후 재로그인
+
 2단계: 그래도 안 되면 PolicyKit 파일 생성
+
 bashsudo nano /etc/polkit-1/localauthority/50-local.d/networkmanager.pkla
+
 아래 내용 붙여넣기:
+
 ini[Network Manager all users]
+
 Identity=unix-group:netdev
+
 Action=org.freedesktop.NetworkManager.*
+
 ResultAny=yes
+
 ResultInactive=yes
+
 ResultActive=yes
+
 bashsudo systemctl restart polkit
+
 sudo systemctl restart NetworkManager
+
 → 재로그인 후 GUI에서 다시 시도
