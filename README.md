@@ -37,3 +37,9 @@ sudo systemctl restart NetworkManager
 ```
 
 → 재로그인 후 GUI에서 다시 시도
+
+
+## 예시 동작 영상
+'''
+https://youtu.be/s6dDlIa_Oxo
+'''
