@@ -113,7 +113,7 @@ results = model.train(
 
 ```python
 from google.colab import files
-files.download('/content/runs/my_train/weights/best.pt')
+files.download('/content/runs/my_train-2/weights/best.pt')
 ```
 
 - 로컬 컴퓨터로 `best.pt` 파일을 바로 다운로드합니다.
@@ -123,7 +123,7 @@ files.download('/content/runs/my_train/weights/best.pt')
 ```python
 # 구글드라이브에 저장하면 코랩 세션이 종료되어도 안전하게 저장 가능하다.
 
-!cp /content/runs/my_train/weights/best.pt /content/drive/MyDrive/best.pt
+!cp /content/runs/my_train-2/weights/best.pt /content/drive/MyDrive/best.pt
 ```
 
 - Colab 세션이 끊기면 `/content` 아래의 모든 파일이 사라지므로, 구글 드라이브가 마운트되어 있다면 이 단계를 통해 결과를 안전하게 보관할 수 있습니다.
@@ -141,7 +141,7 @@ files.download('/content/runs/my_train/weights/best.pt')
 1. 데이터셋 zip 업로드 → 압축 해제
 2. ultralytics 설치
 3. YOLO('yolov8n.pt')로 모델 로드 후 model.train() 실행
-4. /content/runs/my_train/weights/best.pt 생성 확인
+4. /content/runs/my_train-2/weights/best.pt 생성 확인
 5. best.pt 로컬 다운로드
 6. (선택) 구글 드라이브에 복사하여 백업
 ```
