@@ -151,3 +151,8 @@ files.download('/content/runs/my_train-2/weights/best.pt')
 - 업로드 파일명이 `dataset.zip`이 아니면 `unzip` 명령에서 오류가 발생합니다.
 - `data.yaml` 내부의 `train`/`val` 경로가 실제 압축 해제된 폴더 구조와 일치해야 합니다.
 - Colab 세션이 종료되면 업로드했던 파일과 학습 결과가 모두 삭제되므로, 학습 완료 후에는 반드시 `best.pt`를 다운로드하거나 드라이브에 백업해야 합니다.
+
+'''
+학습 진행 영상 참고
+https://youtu.be/IGVm8xvJlYE
+'''
