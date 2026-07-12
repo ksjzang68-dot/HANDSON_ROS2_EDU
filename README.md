@@ -1,7 +1,40 @@
 본 교육 자료는 실습 중심으로 구성되어 있으며, 각 예제는 실제 Jetson Orin Nano 환경에서 바로 실행할 수 있도록 제작되었습니다. ROS2와 Physical AI를 처음 접하는 학습자도 단계적으로 따라갈 수 있도록 기초부터 프로젝트까지 순차적으로 학습할 수 있습니다.
 
+1# 파티션 설정
 
-1# Jetson Nano Wi-Fi 연결 오류 해결
+## 1단계: 파티션 확장
+
+```bash
+parted /dev/mmcblk0 resizepart 1 100%
+```
+
+## 2단계: 파일시스템 확장
+
+```bash
+sudo resize2fs /dev/mmcblk0p1
+```
+
+## 3단계 : 확인
+```bash
+df -h
+```
+
+2# wifi 설정
+
+## 1단계: wifi list 확인
+
+```bash
+nmcli dev wifi list
+```
+
+## 2단계: 확인된 와이파이 접속
+
+```bash
+sudo nmcli dev wifi connect "네트워크이름" password '비밀번호'
+```
+
+
+3# Jetson Nano Wi-Fi 연결 오류 해결
 
 오류 메시지:
 > Failed to add/activate connection — (1) not authorized to control networking
