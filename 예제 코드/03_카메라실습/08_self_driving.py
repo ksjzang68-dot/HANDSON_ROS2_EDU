@@ -185,11 +185,11 @@ def draw_overlay(frame, roi_vertices, left_line, right_line, direction, lane_cen
 
 def motor_moves(direction):
     if direction == "LEFT":
-        robot.start(BASE_SPEED, BASE_SPEED + TURN_BOOST)   # 왼쪽으로 회전
+        robot.start_tank(BASE_SPEED, BASE_SPEED + TURN_BOOST)   # 왼쪽으로 회전
     elif direction == "RIGHT":
-        robot.start(BASE_SPEED + TURN_BOOST, BASE_SPEED)   # 오른쪽으로 회전
+        robot.start_tank(BASE_SPEED + TURN_BOOST, BASE_SPEED)   # 오른쪽으로 회전
     elif direction == "STRAIGHT":
-        robot.start(BASE_SPEED, BASE_SPEED)                # 직진
+        robot.start_tank(BASE_SPEED, BASE_SPEED)                # 직진
     else:
         robot.stop()                                       # 차선 없음 -> 정지
 
