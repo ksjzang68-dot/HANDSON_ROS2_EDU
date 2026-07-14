@@ -6,7 +6,7 @@ model = YOLO('yolov8n.pt')
 # 모델 학습(Training) 파라미터 설정
 results = model.train(
     data='/home/jetson/Desktop/dataset/data.yaml',
-    epochs=50,
+    epochs=10,
     imgsz=416,
     workers=2,
     batch=2,
